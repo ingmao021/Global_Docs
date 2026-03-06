@@ -1,0 +1,71 @@
+/* Estilos vista log de errores */
+
+.vbox {
+    -fx-spacing: 15;
+    -fx-padding: 20 20 20 20;
+}
+
+.label {
+    -fx-text-fill: #333;
+}
+
+/* Título */
+.vbox > .label:first-child {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.hbox {
+    -fx-spacing: 15;
+    -fx-alignment: center-left;
+}
+
+.text-field {
+    -fx-pref-width: 250px;
+    -fx-padding: 6 8 6 8;
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 3px;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 4, 0, 0, 0);
+}
+
+.button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 8 14 8 14;
+}
+
+.button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* Tabla de errores */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #fadbd8;
+    -fx-padding: 10 8 10 8;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8 8 8 8;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fef9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #f5b7b1;
+}

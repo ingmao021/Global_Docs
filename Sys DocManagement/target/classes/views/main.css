@@ -1,0 +1,54 @@
+/* Estilos vista principal */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Barra lateral */
+.sidebar {
+    -fx-background-color: #e8e8e8;
+    -fx-padding: 15 15 15 15;
+    -fx-spacing: 10;
+}
+
+.sidebar .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.sidebar #documentsCountLabel {
+    -fx-font-size: 18px;
+    -fx-text-fill: #1a5276;
+}
+
+.sidebar .combo-box {
+    -fx-pref-width: 180px;
+    -fx-background-color: white;
+}
+
+.sidebar .separator {
+    -fx-padding: 8 0 8 0;
+}
+
+.sidebar .button {
+    -fx-pref-width: 180px;
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 8 12 8 12;
+}
+
+.sidebar .button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.sidebar .button:pressed {
+    -fx-background-color: #1c5a85;
+}
+
+/* Área de contenido central */
+#contentArea {
+    -fx-background-color: #fafafa;
+    -fx-padding: 0;
+}

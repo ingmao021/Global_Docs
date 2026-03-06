@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.docprocessor.presentation.controllers.MainController"
+            prefWidth="900" prefHeight="600" stylesheets="@/views/main.css">
+    <left>
+        <VBox styleClass="sidebar" spacing="10" style="-fx-background-color: #e8e8e8;">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="País activo"/>
+            <ComboBox fx:id="countryComboBox" prefWidth="180" promptText="Seleccionar país"/>
+            <Separator/>
+            <Label text="Documentos en sesión"/>
+            <Label fx:id="documentsCountLabel" text="0"/>
+            <Separator/>
+            <Button text="Cargar documentos" onAction="#onNavigateUpload" prefWidth="180"/>
+            <Button text="Procesamiento" onAction="#onNavigateDashboard" prefWidth="180"/>
+            <Button text="Resultados" onAction="#onNavigateResults" prefWidth="180"/>
+            <Button text="Log de errores" onAction="#onNavigateErrorLog" prefWidth="180"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox fx:id="contentArea" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

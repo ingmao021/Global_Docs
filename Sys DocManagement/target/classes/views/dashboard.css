@@ -1,0 +1,73 @@
+/* Estilos panel de procesamiento por lotes */
+
+.vbox {
+    -fx-spacing: 15;
+    -fx-padding: 20 20 20 20;
+}
+
+.label {
+    -fx-text-fill: #333;
+}
+
+/* Título */
+.vbox > .label:first-child {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Estado actual */
+#statusLabel {
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+    -fx-max-width: 460px;
+    -fx-text-fill: #5d6d7e;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    -fx-pref-height: 24px;
+    -fx-max-width: infinity;
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 4px;
+}
+
+.progress-bar .track {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 4px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);
+    -fx-background-radius: 4px;
+    -fx-padding: 4 4 4 4;
+}
+
+/* Contador y botón cancelar */
+.hbox {
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+}
+
+#counterLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1a5276;
+}
+
+#cancelButton {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 8 14 8 14;
+}
+
+#cancelButton:hover {
+    -fx-background-color: #c0392b;
+}
+
+#cancelButton:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-text-fill: #7f8c8d;
+    -fx-cursor: default;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.docprocessor.presentation.controllers.ResultsController"
+      spacing="15" prefWidth="800" prefHeight="500" stylesheets="@/views/results.css">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label text="Resultados del procesamiento" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Label text="Estado:"/>
+        <ComboBox fx:id="filterSuccessComboBox" prefWidth="150" promptText="Todos"/>
+        <Label text="País:"/>
+        <ComboBox fx:id="filterCountryComboBox" prefWidth="150" promptText="Todos"/>
+        <Button text="Exportar a CSV" onAction="#onExportCsv"/>
+    </HBox>
+    <TableView fx:id="resultsTableView" VBox.vgrow="ALWAYS" prefHeight="350">
+        <columns>
+            <TableColumn fx:id="colFile" text="Archivo" prefWidth="180"/>
+            <TableColumn fx:id="colCountry" text="País" prefWidth="100"/>
+            <TableColumn fx:id="colType" text="Tipo" prefWidth="140"/>
+            <TableColumn fx:id="colFormat" text="Formato" prefWidth="80"/>
+            <TableColumn fx:id="colState" text="Estado" prefWidth="90"/>
+            <TableColumn fx:id="colTime" text="Tiempo (ms)" prefWidth="90"/>
+        </columns>
+    </TableView>
+</VBox>
